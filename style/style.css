@@ -1,4 +1,263 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.btn {
+  background: none;
+}
+
+.nav {
+  padding: 1.25rem 1rem;
+}
+.nav__desktop {
+  display: none;
+}
+.nav__mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.nav .menu-btn {
+  border: none;
+  padding: 0.25rem;
+  margin-right: -0.25rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.content__blurb {
+  text-align: center;
+}
+.content__blurb-heading {
+  font-size: 2.22rem;
+  font-weight: 700;
+  padding-block: 2.5rem 0.25rem;
+}
+.content__blurb-para {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.65;
+  padding: 0.25rem 1rem;
+}
+.content__blurb-btn {
+  border: none;
+  background-color: hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 98%);
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.75rem 1.375rem;
+  margin-block: 1.25rem;
+  border-radius: 1.2rem;
+}
+.content__clients {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  width: 100%;
+}
+.content__clients img {
+  height: 100%;
+  width: 20vw;
+}
+
+.hero-img {
+  content: url(/images/image-hero-mobile.png);
+  padding-block: 0.25rem;
+}
+
+.footer {
+  padding: 1rem;
+  font-size: 0.671rem;
+  text-align: center;
+}
+.footer-link {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 41%);
+}
+.footer-link:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+
+@media (min-width: 800px) {
+  .nav {
+    padding: 1.2rem 2.5rem;
+  }
+  .nav__mobile {
+    display: none;
+  }
+  .nav__desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav__main {
+    display: flex;
+    align-items: center;
+  }
+  .nav__main-img {
+    height: 90%;
+    padding-right: 2.25rem;
+  }
+  .nav__li {
+    display: flex;
+    align-items: center;
+    padding-inline: 1.15rem;
+    font-size: 0.85rem;
+  }
+  .nav__li-img {
+    height: 100%;
+    width: 100%;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    display: flex;
+  }
+  .nav__li-btn {
+    border: 2px solid hsl(0deg, 0%, 8%);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.7rem 1.375rem;
+    border-radius: 0.85rem;
+  }
+  .nav__login {
+    display: flex;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 0.09fr 0.39fr 0.09fr 0.33fr 0.09fr;
+    grid-template-areas: ". main . hero .";
+  }
+
+  .content {
+    grid-area: main;
+    align-self: center;
+    padding: 8rem 0.5rem 0rem 2rem;
+  }
+  .content__blurb {
+    text-align: left;
+  }
+  .content__blurb-heading {
+    font-size: 5rem;
+    font-weight: 700;
+    padding: 0 0 2.5rem 0;
+    line-height: 1.05;
+  }
+  .content__blurb-para {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.65;
+    padding: 0 0 2.5rem 0;
+  }
+  .content__blurb-btn {
+    padding: 0.75rem 1.375rem;
+    margin-block: 1.25rem;
+    border-radius: 1.2rem;
+  }
+  .content__clients {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.25rem 0rem;
+  }
+  .content__clients img {
+    width: 100%;
+  }
+
+  .hero-img {
+    grid-area: hero;
+    content: url(/images/image-hero-desktop.png);
+    padding: 0;
+    width: 100%;
+    align-self: center;
+  }
+}
 body {
   font-family: "Epilogue", sans-serif;
+  font-size: 1.2rem;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

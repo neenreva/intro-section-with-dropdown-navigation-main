@@ -1,0 +1,100 @@
+@use "varibles" as *;
+
+@media (min-width: 800px) {
+  .nav {
+    padding: 1.2rem 2.5rem;
+
+    
+    &__mobile {
+        display: none;
+    }
+    
+    &__desktop {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__main {
+        display: flex;
+        align-items: center;
+        &-img {
+            height: 90%;
+            padding-right: 2.25rem;
+        }
+    }
+
+    &__li {
+        display: flex;
+        align-items: center;
+        padding-inline: 1.15rem;
+        font-size: $fs-300;
+        &-img {
+            height: 100%;
+            width: 100%;
+            margin: .25rem;
+            padding: .25rem;
+            display: flex;
+        }
+        &-btn {
+            border: 2px solid $clr-n-AlmostBlack;
+            font-size: $fs-300;
+            font-weight: 500;
+            padding: 0.7rem 1.375rem;
+            border-radius: $fs-300;
+        }
+    }
+
+    &__login {
+      display: flex;
+    }
+
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 0.09fr 0.39fr 0.09fr 0.33fr 0.09fr;
+    grid-template-areas: ". main . hero .";
+  }
+
+  .content {
+    grid-area: main;
+    align-self: center;
+    padding: 8rem 0.5rem 0rem 2rem;
+    &__blurb {
+      text-align: left;
+      &-heading {
+        font-size: $fs-800;
+        font-weight: 700;
+        padding: 0 0 2.5rem 0;
+        line-height: 1.05;
+      }
+      &-para {
+        font-size: $fs-400;
+        font-weight: 500;
+        line-height: 1.65;
+        padding: 0 0 2.5rem 0;
+      }
+    }
+    &__blurb-btn {
+      padding: 0.75rem 1.375rem;
+      margin-block: 1.25rem;
+      border-radius: $fs-400;
+    }
+    &__clients {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.25rem 0rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .hero-img {
+    grid-area: hero;
+    content: url(/images/image-hero-desktop.png);
+    padding: 0;
+    width: 100%;
+    align-self: center;
+  }
+}

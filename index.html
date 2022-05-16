@@ -1,36 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="stylesheet" href="./style/style.css">
-  <script defer src="app.js"></script>
-</head>
-<body>
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-  Features
-  Company
-  Careers
-  About
+    <link rel="stylesheet" href="./style/style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="nav__desktop">
+        <ul class="nav__main">
+          <img class="nav__main-img" src="./images/logo.svg" alt="Snap logo" />
+          <li class="nav__li">
+            Features<img
+                class="nav__li-img"
+                src="./images/icon-arrow-down.svg"
+                alt=""
+            />
+          </li>
+          <li class="nav__li">
+            Company
+            <img
+                class="nav__li-img"
+                src="./images/icon-arrow-down.svg"
+                alt=""
+            />
+          </li>
+          <li class="nav__li">Careers</li>
+          <li class="nav__li">About</li>
+        </ul>
+        <ul class="nav__login">
+          <li class="nav__li">Login</li>
+          <button class="nav__li-btn btn">Register</button>
+        </ul>
+      </ul>
+      <ul class="nav__mobile">
+        <li><img src="./images/logo.svg" alt="Snap logo" /></li>
+        <li>
+          <button class="menu-btn">
+            <img src="./images/icon-menu.svg" alt="Main menu icon" />
+          </button>
+        </li>
+      </ul>
+    </nav>
 
-  Login
-  Register
+    <main class="main">
+      <div class="content">
+        <section class="content__blurb">
+          <h1 class="content__blurb-heading">Make remote work</h1>
+          <p class="content__blurb-para">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="btn content__blurb-btn">Learn more</button>
+        </section>
+        <picture class="content__clients">
+          <img src="./images/client-databiz.svg" alt="" />
+          <img src="./images/client-audiophile.svg" alt="" />
+          <img src="./images/client-meet.svg" alt="" />
+          <img src="./images/client-maker.svg" alt="" />
+        </picture>
+      </div>
+      <picture class="hero-img">
+        <img src="" alt="hero image" srcset="" />
+      </picture>
+    </main>
 
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer class="footer">
+      Challenge by
+      <a
+        class="footer-link"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a class="footer-link" href="https://github.com/neenreva">neenreva</a>.
+    </footer>
+  </body>
 </html>
