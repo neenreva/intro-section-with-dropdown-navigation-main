@@ -80,26 +80,47 @@ select {
     scroll-behavior: auto !important;
   }
 }
-.btn {
+.link {
   background: none;
+  border: none;
+  text-decoration: none;
+  color: hsl(0deg, 0%, 41%);
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+.link:hover {
+  color: hsl(0deg, 0%, 8%);
 }
 
-.nav {
-  padding: 1.25rem 1rem;
+.dropdown {
+  position: relative;
 }
-.nav__desktop {
-  display: none;
+
+.dropdown-menu-mobile {
+  position: absolute;
+  right: 2rem;
+  top: 4rem;
+  background-color: lightblue;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0.2;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
+
+.dropdown.active > .link + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
 .nav__mobile {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  list-style: none;
-}
-.nav .menu-btn {
-  border: none;
-  padding: 0.25rem;
-  margin-right: -0.25rem;
 }
 
 .main {
@@ -163,44 +184,20 @@ select {
 
 @media (min-width: 800px) {
   .nav {
-    padding: 1.2rem 2.5rem;
-  }
-  .nav__mobile {
-    display: none;
-  }
-  .nav__desktop {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
   }
   .nav__main {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    margin-left: 10rem;
   }
-  .nav__main-img {
-    height: 90%;
-    padding-right: 2.25rem;
+  .nav__logo {
+    position: absolute;
   }
-  .nav__li {
-    display: flex;
-    align-items: center;
-    padding-inline: 1.15rem;
-    font-size: 0.85rem;
+  .nav__menu {
+    display: none;
   }
-  .nav__li-img {
-    height: 100%;
-    width: 100%;
-    margin: 0.25rem;
-    padding: 0.25rem;
-    display: flex;
-  }
-  .nav__li-btn {
-    border: 2px solid hsl(0deg, 0%, 8%);
-    font-size: 0.85rem;
-    font-weight: 500;
-    padding: 0.7rem 1.375rem;
-    border-radius: 0.85rem;
-  }
-  .nav__login {
+  .nav-left, .nav-right {
     display: flex;
   }
 

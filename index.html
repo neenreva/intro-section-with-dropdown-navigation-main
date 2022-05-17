@@ -18,40 +18,28 @@
   </head>
   <body>
     <nav class="nav">
-      <ul class="nav__desktop">
-        <ul class="nav__main">
-          <img class="nav__main-img" src="./images/logo.svg" alt="Snap logo" />
-          <li class="nav__li">
-            Features<img
-                class="nav__li-img"
-                src="./images/icon-arrow-down.svg"
-                alt=""
-            />
-          </li>
-          <li class="nav__li">
-            Company
-            <img
-                class="nav__li-img"
-                src="./images/icon-arrow-down.svg"
-                alt=""
-            />
-          </li>
-          <li class="nav__li">Careers</li>
-          <li class="nav__li">About</li>
-        </ul>
-        <ul class="nav__login">
-          <li class="nav__li">Login</li>
-          <button class="nav__li-btn btn">Register</button>
-        </ul>
-      </ul>
-      <ul class="nav__mobile">
-        <li><img src="./images/logo.svg" alt="Snap logo" /></li>
-        <li>
-          <button class="menu-btn">
-            <img src="./images/icon-menu.svg" alt="Main menu icon" />
-          </button>
-        </li>
-      </ul>
+      <div class="nav__mobile">
+        <img class='nav__logo' src="./images/logo.svg" alt="Snap Logo">
+        <button class="dropdown link" ><img src="./images/icon-menu.svg" alt="Navigation menu" data-dropdown-btn-mobile></button>
+      </div>
+      <div class="nav__main dropdown-menu-mobile" data-dropdown-mobile>
+        <div class="nav-left">
+          <div class="dropdown">
+            <button class="btn link" data-dropdown-btn>Features<img src="./images/icon-arrow-down.svg"></button>
+            <div class="dropdown-menu" data-dropdown></div>
+          </div>
+          <div class="dropdown">
+            <button class="link" data-dropdown-btn>Company<img src="./images/icon-arrow-down.svg"></button>
+            <div class="dropdown-menu" data-dropdown></div>
+          </div>
+          <a class="link" href="#">Careers</a>
+          <a class="link" href="#">About</a>
+        </div>
+        <div class="nav-right">
+          <a href="#" class="link">Login</a>
+          <button class="link" >Register</button>
+        </div>
+      </div>
     </nav>
 
     <main class="main">
