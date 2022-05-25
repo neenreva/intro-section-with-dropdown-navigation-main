@@ -1,5 +1,10 @@
 @use "varibles" as *;
 
+body {
+  overflow: hidden;
+  background-color: $clr-n-AlmostWhite;
+}
+
 .link {
   background: none;
   border: none;
@@ -16,32 +21,114 @@
 
 .dropdown {
   position: relative;
+  z-index: 1;
+
 }
 
-.dropdown-menu-mobile {
+.dropdown-menu {
   position: absolute;
-  right: 2rem;
-  top: 4rem;
-  background-color: lightblue;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-  opacity: .20;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  padding: 1.5rem 0 0 0;
+  opacity: 0;
   pointer-events: none;
+  transition: opacity 0ms ease-in, transform 150ms ease-in;
   transform: translateY(-10px);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  li {
+    display: flex;
+    align-items: center;
+    padding: 0rem 1.5rem;
+    img {
+      margin-right: 1rem;
+    }
+  }
 }
 
 .dropdown.active > .link + .dropdown-menu {
   opacity: 1;
+  transition: 250ms;
+  transition-timing-function: ease-out;
   transform: translateY(0);
   pointer-events: auto;
+  position: unset;
+}
+
+.dropdown.active .nav__btn img {
+  content: url(/images/icon-arrow-up.svg);
+}
+
+li {
+  list-style: none;
+  position: relative;
 }
 
 .nav {
-  &__mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.35rem 1rem;
+
+  &__list,
+  &__list-1,
+  &__list-2 {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__list {
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 4rem;
+    bottom: 0;
+    padding: 1rem 1.5rem;
+    background-color: $clr-n-AlmostWhite;
+    opacity: 0;
+    width: 64vw;
+    transform: translateX(100%);
+    transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  }
+
+  &__list-1 {
+    li {
+      padding-bottom: 1.1rem;
+    }
+  }
+
+  &__list-2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: $fs-300;
+    padding: 1rem 0rem;
+  }
+
+  &__list.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &__list.active > .nav__burger {
+    content: url(/images/icon-close-menu.svg);
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    img {
+      content: url(/images/icon-arrow-down.svg);
+      margin-left: 1rem;
+    }
+  }
+
+  &__register {
+    width: 100%;
+    margin: .75rem;
+    padding: .5rem 0;
+    border: 2px solid $clr-n-AlmostBlack;
+    border-radius: .75rem;
   }
 }
 
@@ -54,13 +141,11 @@
   &__blurb {
     text-align: center;
     &-heading {
-      font-size: $fs-600;
+      font-size: $fs-700;
       font-weight: 700;
       padding-block: 2.5rem 0.25rem;
     }
     &-para {
-      font-size: $fs-400;
-      font-weight: 500;
       line-height: 1.65;
       padding: 0.25rem 1rem;
     }
@@ -70,8 +155,6 @@
     border: none;
     background-color: $clr-n-AlmostBlack;
     color: $clr-n-AlmostWhite;
-    font-size: $fs-400;
-    font-weight: 500;
     padding: 0.75rem 1.375rem;
     margin-block: 1.25rem;
     border-radius: $fs-400;
@@ -81,11 +164,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1rem;
-    width: 100%;
+    padding: 1.5rem 1rem;
     img {
-      height: 100%;
-      width: 20vw;
+      width: 20%;
     }
   }
 }

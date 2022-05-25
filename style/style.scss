@@ -1,16 +1,13 @@
 @use "reset";
-@use "varibles";
+@use "varibles" as *;
 @use "mobile";
 @use "desktop";
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
 
 
 
-body {
+html {
     font-family: "Epilogue", sans-serif;
-    font-size: varibles.$fs-400;
-}
-
-.hidden {
-    display: none;
+    font-size: $fs-400;
+    font-weight: 500;
 }

@@ -18,28 +18,43 @@
   </head>
   <body>
     <nav class="nav">
-      <div class="nav__mobile">
-        <img class='nav__logo' src="./images/logo.svg" alt="Snap Logo">
-        <button class="dropdown link" ><img src="./images/icon-menu.svg" alt="Navigation menu" data-dropdown-btn-mobile></button>
+      <picture class="nav__logo"
+        ><img src="./images/logo.svg" alt="Snap Logo"
+      /></picture>
+      <div class="nav__list">
+        <ul class="nav__list-1">
+          <li class="dropdown" data-dropdown>
+            <button class="nav__btn link" data-dropdown-btn>
+              Features<img src="" />
+            </button>
+            <ul class="dropdown-menu">
+              <li><img src="./images/icon-todo.svg" alt=""><a class="link" href="#">Todo List</a></li>
+              <li><img src="./images/icon-calendar.svg" alt=""><a class="link" href="#">Calendar</a></li>
+              <li><img src="./images/icon-reminders.svg" alt=""><a class="link" href="#">Reminders</a></li>
+              <li><img src="./images/icon-planning.svg" alt=""><a class="link" href="#">Planning</a></li>
+            </ul>
+          </li>
+          <li class="dropdown" data-dropdown>
+            <button class="nav__btn link" data-dropdown-btn>
+              Company<img src="" />
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="link" href="#">History</a></li>
+              <li><a class="link" href="#">Our Team</a></li>
+              <li><a class="link" href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li><a class="link" href="#">Careers</a></li>
+          <li><a class="link" href="#">About</a></li>
+        </ul>
+        <ul class="nav__list-2">
+          <a class="link" href="#">Login</a>
+          <button class="link nav__register">Register</button>
+        </ul>
       </div>
-      <div class="nav__main dropdown-menu-mobile" data-dropdown-mobile>
-        <div class="nav-left">
-          <div class="dropdown">
-            <button class="btn link" data-dropdown-btn>Features<img src="./images/icon-arrow-down.svg"></button>
-            <div class="dropdown-menu" data-dropdown></div>
-          </div>
-          <div class="dropdown">
-            <button class="link" data-dropdown-btn>Company<img src="./images/icon-arrow-down.svg"></button>
-            <div class="dropdown-menu" data-dropdown></div>
-          </div>
-          <a class="link" href="#">Careers</a>
-          <a class="link" href="#">About</a>
-        </div>
-        <div class="nav-right">
-          <a href="#" class="link">Login</a>
-          <button class="link" >Register</button>
-        </div>
-      </div>
+      <picture>
+        <img class="nav__burger" src="./images/icon-menu.svg" alt="" data-ham-btn />
+      </picture>
     </nav>
 
     <main class="main">
