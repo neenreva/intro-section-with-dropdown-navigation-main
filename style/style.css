@@ -135,7 +135,7 @@ body {
 }
 
 .dropdown.active .nav__btn img {
-  content: url(/images/icon-arrow-up.svg);
+  content: url(./images/icon-arrow-up.svg);
 }
 
 li {
@@ -235,7 +235,7 @@ li {
 }
 
 .hero-img {
-  content: url(/images/image-hero-mobile.png);
+  content: url(./images/image-hero-mobile.png);
   padding-block: 0.25rem;
 }
 
