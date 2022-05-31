@@ -81,7 +81,7 @@ select {
   }
 }
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: hsl(0deg, 0%, 98%);
 }
 
@@ -108,6 +108,7 @@ body {
   position: absolute;
   display: flex;
   flex-direction: column;
+  background-color: hsl(0deg, 0%, 98%);
   left: 0;
   top: 0;
   padding: 1.5rem 0 0 0;
@@ -119,7 +120,6 @@ body {
 .dropdown-menu li {
   display: flex;
   align-items: center;
-  padding: 0rem 1.5rem;
 }
 .dropdown-menu li img {
   margin-right: 1rem;
@@ -166,8 +166,8 @@ li {
   transform: translateX(100%);
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
 }
-.nav__list-1 li {
-  padding-bottom: 1.1rem;
+.nav__sub-li {
+  padding-bottom: 1rem;
 }
 .nav__list-2 {
   display: flex;
@@ -304,15 +304,18 @@ li {
   .nav__list-1 {
     padding-left: 4rem;
   }
-  .nav__list-1 li {
-    padding: 0 1rem;
-    padding-right: 2.25rem;
-  }
   .nav__list-2 {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     padding: 0;
+  }
+  .nav__main-li {
+    padding: 0 1rem;
+    padding-right: 2.25rem;
+  }
+  .nav__sub-li {
+    padding: 0 1rem 1rem 1rem;
   }
   .nav__btn img {
     margin-left: 0.5rem;

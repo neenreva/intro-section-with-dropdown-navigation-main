@@ -1,7 +1,7 @@
 @use "varibles" as *;
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: $clr-n-AlmostWhite;
 }
 
@@ -29,6 +29,7 @@ body {
   position: absolute;
   display: flex;
   flex-direction: column;
+  background-color: $clr-n-AlmostWhite;
   left: 0;
   top: 0;
   padding: 1.5rem 0 0 0;
@@ -39,7 +40,6 @@ body {
   li {
     display: flex;
     align-items: center;
-    padding: 0rem 1.5rem;
     img {
       margin-right: 1rem;
     }
@@ -91,11 +91,10 @@ li {
     transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   }
 
-  &__list-1 {
-    li {
-      padding-bottom: 1.1rem;
-    }
+  &__sub-li {
+    padding-bottom: 1rem;
   }
+
 
   &__list-2 {
     display: flex;

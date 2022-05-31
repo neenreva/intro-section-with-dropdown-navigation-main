@@ -59,15 +59,20 @@
 
     &__list-1 {
       padding-left: 4rem;
-      li {
-        padding: 0 1rem;
-        padding-right: 2.25rem;//Playing with these li vs li up the tree
-      }
     }
 
     &__list-2 {
       width: fit-content;
       padding: 0;
+    }
+    
+    &__main-li {
+      padding: 0 1rem;
+      padding-right: 2.25rem;
+    }
+
+    &__sub-li {
+      padding: 0 1rem 1rem 1rem;
     }
 
     &__btn img {
