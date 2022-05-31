@@ -135,7 +135,7 @@ body {
 }
 
 .dropdown.active .nav__btn img {
-  content: url(./images/icon-arrow-up.svg);
+  content: url(../images/icon-arrow-up.svg);
 }
 
 li {
@@ -181,14 +181,14 @@ li {
   transform: translateX(0);
 }
 .nav__list.active > .nav__burger {
-  content: url(/images/icon-close-menu.svg);
+  content: url(../images/icon-close-menu.svg);
 }
 .nav__btn {
   display: flex;
   align-items: center;
 }
 .nav__btn img {
-  content: url(/images/icon-arrow-down.svg);
+  content: url(../images/icon-arrow-down.svg);
   margin-left: 1rem;
 }
 .nav__register {
@@ -235,7 +235,7 @@ li {
 }
 
 .hero-img {
-  content: url(./images/image-hero-mobile.png);
+  content: url(../images/image-hero-mobile.png);
   padding-block: 0.25rem;
 }
 
@@ -377,7 +377,7 @@ li {
 
   .hero-img {
     grid-area: hero;
-    content: url(/images/image-hero-desktop.png);
+    content: url(../images/image-hero-desktop.png);
     padding: 0;
     width: 100%;
     min-width: 50%;
